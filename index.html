@@ -1,16 +1,73 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/orange.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ángel Manuel</title>
+  <title>Portafolio - Tu Nombre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
 </head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+  <!-- Navbar -->
+  <header class="bg-gray-100 dark:bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mi Portafolio</h1>
+      <nav class="space-x-4">
+        <a href="#inicio" class="hover:underline">Inicio</a>
+        <a href="#sobre" class="hover:underline">Sobre mí</a>
+        <a href="#proyectos" class="hover:underline">Proyectos</a>
+        <a href="#contacto" class="hover:underline">Contacto</a>
+        <button onclick="toggleDarkMode()" class="ml-4 px-2 py-1 border rounded">
+          🌗
+        </button>
+      </nav>
+    </div>
+  </header>
 
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
+  <!-- Secciones -->
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-20">
+    <section id="inicio">
+      <h2 class="text-3xl font-bold mb-4">Hola, soy [Tu Nombre]</h2>
+      <p class="text-lg">Desarrollador apasionado por crear soluciones con tecnología moderna.</p>
+    </section>
+
+    <section id="sobre">
+      <h2 class="text-2xl font-semibold mb-2">Sobre mí</h2>
+      <p>Soy un ingeniero en sistemas con experiencia en desarrollo backend y frontend.</p>
+    </section>
+
+    <section id="proyectos">
+      <h2 class="text-2xl font-semibold mb-2">Proyectos</h2>
+      <ul class="space-y-4">
+        <li class="p-4 border rounded dark:border-gray-700">
+          <h3 class="font-bold">Proyecto 1</h3>
+          <p>Descripción breve del proyecto.</p>
+        </li>
+        <li class="p-4 border rounded dark:border-gray-700">
+          <h3 class="font-bold">Proyecto 2</h3>
+          <p>Descripción breve del proyecto.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2 class="text-2xl font-semibold mb-2">Contacto</h2>
+      <p>Correo: tunombre@email.com</p>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm py-4 border-t dark:border-gray-700">
+    © 2025 Tu Nombre. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
 </body>
-
 </html>
