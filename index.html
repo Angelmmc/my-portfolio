@@ -5,8 +5,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio - Tu Nombre</title>
+    <title>Portfolio - Ángel Manuel</title>
     <link href="/src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="module" src="/src/main.ts"></script>
     <script>
         tailwind.config = {
@@ -17,58 +18,125 @@
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
     <!-- Navbar -->
-    <header class="bg-gray-100 dark:bg-gray-800 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold">Mi Portafolio</h1>
-            <nav class="space-x-4">
-                <a href="#inicio" class="hover:underline">Inicio</a>
-                <a href="#sobre" class="hover:underline">Sobre mí</a>
-                <a href="#proyectos" class="hover:underline">Proyectos</a>
-                <a href="#contacto" class="hover:underline">Contacto</a>
-                <button id="toggleDark" class="ml-4 px-2 py-1 border rounded">
-                    🌗
+    <!DOCTYPE html>
+    <html lang="es" class="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Angel Manuel - Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+            }
+        </script>
+    </head>
+
+    <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
+        <header class="bg-gray-100 dark:bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+        <!-- Contenedor principal con todo alineado -->
+        <div class="flex justify-between items-center">
+            <!-- Información del usuario -->
+            <div class="flex flex-col">
+                <h1 class="text-2xl font-bold flex items-center space-x-1">
+                    <span class="font-poppins text-gray-800 dark:text-white font-bold">Angel</span>
+                    <span class="font-poppins font-extrabold text-orange-600 dark:text-blue-500">Manuel</span>
+                </h1>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1 font-medium">
+                    IT Engineer | Back-End & Mobile Developer | ERP Solutions | Driving IT Excellence
+                </p>
+            </div>
+            
+            <!-- Navegación y controles (desktop) -->
+            <div class="hidden sm:flex items-center space-x-6">
+                <!-- Menú de navegación -->
+                <nav class="flex items-center space-x-4">
+                    <a href="#about" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-gray-700 dark:text-gray-300">About me</a>
+                    <a href="#portfolio" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-gray-700 dark:text-gray-300">Portfolio</a>
+                    <a href="#resume" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-gray-700 dark:text-gray-300">Resume</a>
+                    <a href="#skills" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-gray-700 dark:text-gray-300">Skills</a>
+                    <a href="#contact" class="hover:underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-gray-700 dark:text-gray-300">Contact</a>
+                </nav>
+                
+                <!-- Botón dark mode (desktop) -->
+                <button id="toggleDark" class="px-3 py-2 rounded-lg transition-colors hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300">
+                    <svg class="w-5 h-5 sun-icon dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                    <svg class="w-5 h-5 moon-icon hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
                 </button>
-            </nav>
+            </div>
+            
+            <!-- Botón hamburguesa (solo móviles) -->
+            <button id="menu-toggle" class="sm:hidden focus:outline-none text-gray-700 dark:text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
-    </header>
+        
+        <!-- Menú móvil (oculto por defecto) -->
+        <nav id="mobile-menu" class="sm:hidden hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-gray-700 dark:text-gray-300">About me</a>
+                <a href="#portfolio" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-gray-700 dark:text-gray-300">Portfolio</a>
+                <a href="#resume" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-gray-700 dark:text-gray-300">Resume</a>
+                <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-gray-700 dark:text-gray-300">Skills</a>
+                <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 text-gray-700 dark:text-gray-300">Contact</a>
+                
+                <!-- Botón dark mode (móvil) -->
+                <button id="toggleDark-mobile" class="flex items-center py-2 text-left text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
+                    Toggle Dark Mode
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <!-- Secciones -->
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-20">
-        <section id="inicio">
-            <h2 class="text-3xl font-bold mb-4">Hola, soy [Tu Nombre]</h2>
-            <p class="text-lg">Desarrollador apasionado por crear soluciones con tecnología moderna.</p>
-        </section>
+        <!-- Secciones -->
+        <main class="max-w-4xl mx-auto px-4 py-8 space-y-20">
+            <section id="inicio">
+                <h2 class="text-3xl font-bold mb-4">Hola, soy [Tu Nombre]</h2>
+                <p class="text-lg">Desarrollador apasionado por crear soluciones con tecnología moderna.</p>
+            </section>
 
-        <section id="sobre">
-            <h2 class="text-2xl font-semibold mb-2">Sobre mí</h2>
-            <p>Soy un ingeniero en sistemas con experiencia en desarrollo backend y frontend.</p>
-        </section>
+            <section id="about">
+                <h2 class="text-2xl font-semibold mb-2">about mí</h2>
+                <p>Soy un ingeniero en sistemas con experiencia en desarrollo backend y frontend.</p>
+            </section>
 
-        <section id="proyectos">
-            <h2 class="text-2xl font-semibold mb-2">Proyectos</h2>
-            <ul class="space-y-4">
-                <li class="p-4 border rounded dark:border-gray-700">
-                    <h3 class="font-bold">Proyecto 1</h3>
-                    <p>Descripción breve del proyecto.</p>
-                </li>
-                <li class="p-4 border rounded dark:border-gray-700">
-                    <h3 class="font-bold">Proyecto 2</h3>
-                    <p>Descripción breve del proyecto.</p>
-                </li>
-            </ul>
-        </section>
+            <section id="proyectos">
+                <h2 class="text-2xl font-semibold mb-2">Proyectos</h2>
+                <ul class="space-y-4">
+                    <li class="p-4 border rounded dark:border-gray-700">
+                        <h3 class="font-bold">Proyecto 1</h3>
+                        <p>Descripción breve del proyecto.</p>
+                    </li>
+                    <li class="p-4 border rounded dark:border-gray-700">
+                        <h3 class="font-bold">Proyecto 2</h3>
+                        <p>Descripción breve del proyecto.</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="contacto">
-            <h2 class="text-2xl font-semibold mb-2">Contacto</h2>
-            <p>Correo: tunombre@email.com</p>
-        </section>
-    </main>
+            <section id="contacto">
+                <h2 class="text-2xl font-semibold mb-2">Contacto</h2>
+                <p>Correo: tunombre@email.com</p>
+            </section>
+        </main>
 
-    <footer class="text-center text-sm py-4 border-t dark:border-gray-700">
-        © 2025 Tu Nombre. Todos los derechos reservados.
-    </footer>
+        <footer class="text-center text-sm py-4 border-t dark:border-gray-700">
+            © 2025 Tu Nombre. Todos los derechos reservados.
+        </footer>
 
 
-</body>
+    </body>
 
-</html>
+    </html>
