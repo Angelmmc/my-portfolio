@@ -15,7 +15,7 @@
     </script>
 </head>
 
-<body class="pt-20 bg-gray-100 dark:bg-stone-800 text-gray-900 dark:text-white transition-colors">
+<body class="pt-22 bg-gray-100 dark:bg-stone-800 text-gray-900 dark:text-white transition-colors">
     <header class="fixed top-0 left-0 right-0 w-full bg-white dark:bg-stone-900 shadow-md z-50">
         <div class="max-w-7xl mx-auto px-4 py-4">
             <!-- Contenedor principal con todo alineado -->
@@ -38,7 +38,8 @@
                     <!-- Menú de navegación -->
                     <nav class="flex items-center space-x-4">
                         <a href="#about"
-                            class="px-2 py-1 rounded-md transition-colors text-gray-700 dark:text-gray-300 hover:bg-orange-100 hover:text-orange-500 dark:hover:bg-blue-800 dark:hover:text-blue-300">About me</a>
+                            class="px-2 py-1 rounded-md transition-colors text-gray-700 dark:text-gray-300 hover:bg-orange-100 hover:text-orange-500 dark:hover:bg-blue-800 dark:hover:text-blue-300">About
+                            me</a>
                         <a href="#portfolio"
                             class="px-2 py-1 rounded-md transition-colors text-gray-700 dark:text-gray-300 hover:bg-orange-100 hover:text-orange-500 dark:hover:bg-blue-800 dark:hover:text-blue-300">Portfolio</a>
                         <a href="#resume"
@@ -95,7 +96,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
-                        Toggle Dark Mode
                     </button>
                 </div>
             </nav>
@@ -104,14 +104,45 @@
 
     <!-- Secciones -->
     <main class="max-w-4xl mx-auto px-4 py-8 space-y-20">
-        <section id="inicio">
-            <h2 class="text-3xl font-bold mb-4">Hola, soy [Tu Nombre]</h2>
-            <p class="text-lg">Desarrollador apasionado por crear soluciones con tecnología moderna.</p>
-        </section>
-
         <section id="about">
-            <h2 class="text-2xl font-semibold mb-2">about mí</h2>
-            <p>Soy un ingeniero en sistemas con experiencia en desarrollo backend y frontend.</p>
+            <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">About Me</h2>
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <!-- Imagen -->
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img src="/img/profile-picture.jpg" alt="Tu foto" class="rounded-lg object-cover w-80 h-80">
+                </div>
+
+                <!-- Texto y tabla -->
+                <div class="w-full md:w-2/3 space-y-4">
+                    <p class="text-base">I'm Ángel Manuel, an ICT Engineer specializing in back-end development (Java,
+                        Python, PHP) and cross-platform mobile apps (Flutter, Ionic). I design scalable RESTful APIs,
+                        high-availability systems, and optimize mobile user experiences. With additional front-end
+                        expertise (TypeScript, Vue.js), I bring a full-stack perspective to teams. I focus on solving
+                        complex problems, adapting to new technologies, and delivering impactful solutions through
+                        effective collaboration.</p>
+
+                    <table class="w-full text-left table-auto border-separate border-spacing-y-2">
+                        <tbody>
+                            <tr>
+                                <th class="pr-4 text-gray-600 dark:text-gray-400">Age:</th>
+                                <td class="font-medium" id="age">22 years</td>
+                            </tr>
+                            <tr>
+                                <th class="pr-4 text-gray-600 dark:text-gray-400">Languages:</th>
+                                <td class="font-medium">Spanish, English (B2)</td>
+                            </tr>
+                            <tr>
+                                <th class="pr-4 text-gray-600 dark:text-gray-400">Alma mater:</th>
+                                <td class="font-medium">Instituto Tecnológico de Pachuca</td>
+                            </tr>
+                            <tr>
+                                <th class="pr-4 text-gray-600 dark:text-gray-400">Location:</th>
+                                <td class="font-medium">Pachuca de Soto, Hidalgo México</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
 
         <section id="proyectos">
