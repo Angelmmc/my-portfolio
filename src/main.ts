@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleDark = document.getElementById('toggleDark');
   const toggleDarkMobile = document.getElementById('toggleDark-mobile');
 
-  const proyectos = document.querySelectorAll('#proyectos .group');
+  const projects = document.querySelectorAll('#portfolio .group');
   let tocadoActual: Element | null = null;
 
   const sunIcon = `
@@ -84,15 +84,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Manejo de clics en tarjetas de proyectos
-  proyectos.forEach((card) => {
+  // Manejo de clics en tarjetas de projects
+  projects.forEach((card) => {
     card.addEventListener('click', (e) => {
       if (tocadoActual !== card) {
         e.preventDefault();
         tocadoActual = card;
 
         // Reiniciar otras
-        proyectos.forEach((p) => {
+        projects.forEach((p) => {
           if (p !== card) {
             p.classList.remove('hover');
           }
