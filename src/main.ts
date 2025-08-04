@@ -125,4 +125,9 @@ document.addEventListener('DOMContentLoaded', function () {
       (event.currentTarget as HTMLElement).style.transform = 'translateY(0)';
     });
   });
+
+  const currentYearElem = document.getElementById('currentYear');
+  if (currentYearElem) {
+    currentYearElem.textContent = new Date().getFullYear().toString();
+  }
 });
