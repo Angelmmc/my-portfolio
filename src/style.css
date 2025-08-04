@@ -9,6 +9,8 @@
   --font-poppins: "Poppins", sans-serif;
 }
 
+/* Resume */
+
 .timeline-line {
   background: linear-gradient(to bottom, #fc6b09, #edb00a);
 }
@@ -47,4 +49,10 @@
   font-weight: bold;
   font-size: 18px;
   color: #6b7280;
+}
+
+/* Footer */
+
+.shadow-top {
+  box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
 }

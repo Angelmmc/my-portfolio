@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Actualizar iconos de dark mode
+  // Update dark mode icons based on current theme
   function updateDarkIcons() {
     const isDark = document.documentElement.classList.contains('dark');
     if (toggleDark) toggleDark.innerHTML = isDark ? sunIcon : moonIcon;
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  // Cerrar menú móvil al redimensionar la ventana
+  // Close mobile menu on resize if screen is larger than sm breakpoint
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 640) { // sm breakpoint
       if (mobileMenu) {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Manejo de clics en tarjetas de projects
+  // Click manager for project cards
   projects.forEach((card) => {
     card.addEventListener('click', (e) => {
       if (tocadoActual !== card) {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         card.classList.add('hover');
 
-        // Reset después de 3s si no se hace clic otra vez
+        // Reset hover after 3 seconds
         setTimeout(() => {
           if (tocadoActual === card) {
             card.classList.remove('hover');
@@ -115,5 +115,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* Animation for moving the icons in the footer */
+  document.querySelectorAll('footer a').forEach(link => {
+    link.addEventListener('mouseenter', (event) => {
+      (event.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
+    });
 
+    link.addEventListener('mouseleave', (event) => {
+      (event.currentTarget as HTMLElement).style.transform = 'translateY(0)';
+    });
+  });
 });
