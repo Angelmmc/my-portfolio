@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,11 +8,6 @@
     <link href="/src/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="module" src="/src/main.ts"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        };
-    </script>
 </head>
 
 <body class="pt-22 bg-gray-100 dark:bg-stone-800 text-gray-900 dark:text-white transition-colors">
@@ -104,7 +99,7 @@
 
     <!-- Secciones -->
     <main class="max-w-4xl mx-auto px-4 py-8 space-y-15">
-        <section id="about">
+        <section id="about" class="scroll-mt-25">
             <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white text-center">About Me</h2>
             <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
                 <!-- Imagen -->
@@ -145,7 +140,7 @@
             </div>
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" class="scroll-mt-25">
             <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white text-center">Portfolio</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Blogtris Project -->
@@ -192,7 +187,7 @@
             </div>
         </section>
 
-        <section id="resume" class="mb-12">
+        <section id="resume"  class="scroll-mt-25">
             <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white text-center">Resume</h2>
 
             <!-- Experience -->
@@ -287,7 +282,7 @@
                                         <div>
                                             <h4 class="text-xl font-bold text-gray-800">SAP MM Assistant</h4>
                                             <p class="text-lg text-orange-500 dark:text-blue-500 font-semibold">Grupo
-                                                Rica
+                                                Rica | Coca-Cola
                                             </p>
                                             <p class="text-gray-600">Pachuca de Soto, Hidalgo, Mexico</p>
                                         </div>
@@ -322,6 +317,49 @@
                 </div>
             </div>
 
+            <!-- Education -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                    Education
+                </h3>
+
+                <div class="relative">
+                    <!-- Vertical Timeline -->
+                    <div class="absolute left-8 top-0 w-1 h-full timeline-line rounded-full"></div>
+
+                    <!-- Education -->
+                    <div class="relative flex items-start mb-12">
+                        <div class="timeline-dot w-4 h-4 rounded-full absolute left-6 top-6 z-10"></div>
+                        <div class="experience-card ml-16 p-6 rounded-xl border border-gray-200 shadow-lg w-full">
+                            <div class="flex flex-col md:flex-row md:items-start gap-4">
+                                <div class="logo-placeholder w-16 h-16 rounded-lg flex-shrink-0">
+                                    <img src="/img/itp.png" alt="ITP logo"
+                                        class="w-fit h-fit object-cover rounded-lg">
+                                </div>
+
+                                <div class="flex-grow">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                                        <div>
+                                            <h4 class="text-xl font-bold text-gray-800">Bachelor of Engineering
+                                            </h4>
+                                            <h4 class="text-xl font-bold text-gray-800">Information and Communication
+                                                Technologies</h4>
+                                            <p class="text-lg text-yellow-500 font-semibold dark:text-purple-500">
+                                                Instituto Tecnológico de
+                                                Pachuca</p>
+                                            <p class="text-gray-600">Pachuca, Hidalgo, Mexico</p>
+                                        </div>
+                                        <div
+                                            class="bg-gradient-to-r from-green-100 to-blue-100 px-3 py-1 rounded-full text-sm font-semibold text-gray-700 mt-2 md:mt-0">
+                                            2020 - 2025
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="">
