@@ -1,4 +1,14 @@
+/* Library aos for animations */
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 document.addEventListener('DOMContentLoaded', function () {
+
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const toggleDark = document.getElementById('toggleDark');
