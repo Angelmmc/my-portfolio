@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
     once: true,
   });
 
+  const tdAge = document.getElementById('age');
+  if(tdAge){
+    tdAge.textContent = calculateAge(new Date(2002, 11, 20)).toString() + ' years';
+  }
+
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const toggleDark = document.getElementById('toggleDark');
@@ -136,8 +141,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const currentYearElem = document.getElementById('currentYear');
-  if (currentYearElem) {
-    currentYearElem.textContent = new Date().getFullYear().toString();
+  function calculateAge(dateOfBirth: Date): number {
+  const today = new Date();
+  let edad = today.getFullYear() - dateOfBirth.getFullYear();
+
+  const month = today.getMonth() - dateOfBirth.getMonth();
+  if (month < 0 || (month === 0 && today.getDate() < dateOfBirth.getDate())) {
+    edad--;
   }
+
+  return edad;
+}
+
 });
